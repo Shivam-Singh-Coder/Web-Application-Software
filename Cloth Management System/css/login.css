@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #3f4d61;
+
+  }
+
+  .login-container {
+    max-width: 350px;
+    margin: 100px auto;
+    background-color: #283342;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .login-container label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+
+  .button-group button {
+    width: 160px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .cancel-btn {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .login-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+.both-link{
+    margin-top: 10px;
+}
+.both-link a{
+    color: rgb(0, 132, 255);
+    text-decoration: none;
+}
+.both-link a:hover{
+    text-decoration: underline;
+}
+.forgot-password{
+    text-align: right;
+    margin-left: 120px;
+}

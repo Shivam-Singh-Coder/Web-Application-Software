@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form>
+      <label for="userid">User ID:</label>
+      <input type="text" id="userid" >
+
+      <label for="password">Password:</label>
+      <input type="password" id="password">
+
+      <div class="both-link">
+        <a href="html/signup.html">New register?</a>
+        <a href="html/forgot-password.html" class="forgot-password">Forgot Password?</a>
+      </div>
+ 
+
+      <div class="button-group">
+        <button type="reset" class="cancel-btn">Cancel</button>
+        <button class="login-btn" type="button">Login</button>
+    </div>
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.login-btn').on('click',function(){
+        const user_id = $('#userid').val()?.trim();
+        const password = $('#password').val()?.trim();
+        if(!user_id || !password){
+          alert("Please enter userid and password!");
+          return;
+        }
+        $.ajax({
+          method: 'POST',
+          url: './python/backend.py',
+          data: {
+              cond: 'auth',
+              user_id: user_id,
+              password: password
+          },
+          success: function (response) {
+              try {
+                  // Parse if needed (depends on server response headers)
+                  if (typeof response === 'string') {
+                      response = JSON.parse(response);
+                  }
+
+                  if (response.success) {
+                    // ✅ Set cookie
+                    document.cookie = "user_id=" + encodeURIComponent(user_id) + "; path=/; max-age=86400"; // 1 day expiry
+                    window.location.href = "./html/Dashboard.html";
+                  }
+                  else {
+                      alert(response.message);
+                  }
+              }
+              catch (e) {
+                  alert("Error parsing response: " + e);
+              }
+          },
+          error: function (xhr, status, error) {
+              alert("AJAX Error: " + error);
+          }
+        });
+      })
+
+    })
+  </script>
+</body>
+</html>

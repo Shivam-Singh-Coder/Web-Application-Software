@@ -1,0 +1,187 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+.div1{
+    display: flex;
+    width: 100%;
+}
+.leftdiv{
+    background-color: #283342;
+    min-height: 850px;
+
+
+
+}
+.logodiv{
+    display: flex;
+    background-color: #1D242E; 
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+}
+.logodiv img{
+    width: 60px;
+}
+.logodiv a{
+    text-decoration: none;
+    font-size: 32px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 15px 30px 10px 10px;
+}
+.vertical-menu{
+    position: sticky;
+    top: 82px;
+    background-color: #283342;
+
+}
+.vertical-menu a {
+    color: white;
+    display: block;
+    padding: 20px 0px 20px 70px;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+} 
+.vertical-menu a:hover {
+    color: white;
+    background-color: #4d5868;
+    display: block;
+    padding: 20px;
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.vertical-menu a.active {
+    background-color: #009099;
+    color: white;
+}
+.rightdiv{
+    width: 100%;
+}
+.upper_div{
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    border-bottom: 1px solid gray;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}
+.date_time{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 9px;
+    font-size: 20px;
+}
+.upper_div input
+{
+    width: 33%;
+    border-radius: 5px;
+    padding: 9px;
+    font-size: 15px;
+    border: none;
+    background-color: #EDF1F5;
+    margin-left: 370px;
+}
+.rdiv{
+    display: flex;
+}
+.rdiv p{
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 10px 0px 20px;
+    font-size: 20px;
+}
+.rdiv img{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.lower_div{
+    width: auto;
+    height: 85%;
+    background-color: #EDF1F5;
+    padding: 20px 50px;
+}
+.lower_div h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #858B92;
+    display: inline-block;
+}
+
+.profile{
+    width: 200px;
+    height: 220px;
+    border: 1px solid #1D242E;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #EDF1F5;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    z-index: 1;
+    display: none;
+}
+.profile a{
+    background-color: #009099;
+    padding: 10px 70px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+.profile a:hover{
+    background-color: #097a83;
+}
+.profile img{
+    width: 100px;
+    border-radius: 50%;
+    margin: 10px 50px;
+}
+.profile h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 0px 45px;
+    color: #009099;
+}
+.profile p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 5px 45px 20px 10px;
+}
+
+
+.div_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.sbox{
+    width: 20%;
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 1px 1px 5px  black;
+}
+.text{
+    
+    margin-top: 30px;
+}
+
+.text h1{
+    font-size: 25px;
+}

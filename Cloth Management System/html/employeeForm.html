@@ -1,0 +1,239 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/addmedicine.css">
+        <link rel="stylesheet" href="../css/sidemenu.css">
+        <title>Cloth | Employee Details</title>
+        <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="div1">
+            <div class="leftdiv">
+                <div class="logodiv">
+                    <img src="../img/logo.png" alt="">
+                    <a href="dashboard.html">ClothStore</a>
+                </div>
+                <div class="vertical-menu">
+                    <i class="fa-solid fa-house fa-xl" style="position: relative; top: 25px; left: 30px; color: #ffffff;"></i><a href="Dashboard.html" >Dashboard</a>
+                    <i class="fa-solid fa-user fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="employee.html"class="active">Employee Details</a>
+                    <i class="fa-solid fa-users fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="customer.html">Customer Details</a>
+                    <i class="fa-solid fa-clipboard fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="order_details.html">Order Details</a>
+                    <i class="fa-solid fa-dumpster-fire fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="product.html">Product Details</a>
+                    <i class="fa-solid fa-box fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="stock.html">Stock Details</a>
+                    <i class="fa-solid fa-money-check fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="employee_payment.html">Employe Payments</a>
+                    <i class="fa-solid fa-credit-card fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="customer_payment.html">Customer Payments</a>
+                
+                  </div>
+            </div>
+
+            <div class="rightdiv">
+                <div class="upper_div">
+                    <p class="date_time">
+                        Today's Date: <span id="formattedDate"></span>
+                      </p>                    
+                    
+                    
+                </div>
+               
+                <div class="lower_div" >
+                    <h2> Employee Details > </h2> <br>
+                    <a href="employee.html" class="service_btn"> <i class="fa-solid fa-arrow-left"></i> Service </a>  <br> <br>  <br>
+                        <div class="item_entry" id="item_entry">
+
+                            <h3>  Entry  Form </h3>
+                            <form action="" method="post" id="employeeForm">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label for="">Employee ID </label> <br>
+                                            <input id="med-id" readonly name="emp_id" class="form-control"data-validation="" required type="text" placeholder="Employee ID">
+                                            <div class="invalid-feedback" style="color: red;"></div>
+                                        </td>
+                                        <td>
+                                            <label for="">Employee Name</label> <br>
+                                            <input id="med-name" type="text" name="emp_name" class="form-control"data-validation="onlyalphabets" required placeholder="Enter Employee Name " >
+                                            <div class="invalid-feedback" style="color: red;"></div>
+                                        </td>
+                                        <td>
+                                            <label for="">Employee Number</label> <br>
+                                            <input id="med-compa" type="text" name="emp_number" class="form-control" minlength="10" maxlength="10" data-validation="onlynumbers" required placeholder="Enter Employee Number" >
+                                            <div class="invalid-feedback" style="color: red;"></div>
+                                        </td>
+        
+                                        
+    
+                                    </tr>
+                            
+                                    
+                                    
+                                    <tr> 
+                                        <td>
+                                            <label for="" id="med-level"> Employee Email </label> <br>
+                                            <input id="change" type="email" class="form-control email" name="emp_email"  required placeholder="Enter Employee Email"> 
+                                            <div class="invalid-feedback" style="color: red;"></div>   
+                                        </td>
+                                        
+                                        <td>
+                                            <label for="">Date Of Birth</label> <br>
+                                            <input id="dob" type="date" required name="emp_dob">
+                                            <div class="invalid-feedback" style="color: red;"></div>
+                                        </td>
+                                        <td>
+                                            <label for="">Gender</label><br>
+                                            <input id="" type="radio" name="emp_gender" checked value="male"> Male
+                                            <input id="" type="radio" name="emp_gender" value="female"> Female
+                                            <input id="" type="radio" name="emp_gender" value="other"> Other
+                                            <div class="invalid-feedback" style="color: red;"></div>
+                                        </td>
+    
+                                    </tr>
+    
+                                    <tr>
+                                        <td colspan="2">
+                                            <label for="" >Address</label> <br>
+                                            <input type="text" placeholder="Enter Address " required style="width: 710px;" name="emp_address">
+                                            <div class="invalid-feedback" style="color: red;"></div>
+    
+                                        </td>
+                                        <td>
+                                            <div class="div-btn">
+                                                <button type="submit"  id="submit" style=" background-color: green; "> Submit  </button>
+                                                <button type="reset" id="reset" style="background-color: red; ">Reset</button>
+                                               
+                                       
+                                            </div>   
+                                        </td>
+                                    </tr>
+                             
+                                   
+                                </table>
+                            </form>
+                              
+                            
+                            <h2 id="save-msg" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; color: green; text-align: center; padding: 25px; position: relative; left: 410px; "></h2>
+                        </div>
+                     
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/index.js"></script>
+    <script>
+        function medtype(){
+       
+            const select = document.getElementById('med-type').value;
+            
+            if(select == 'tablet'){
+                document.getElementById('med-level').innerHTML = 'Number of Strip';
+                document.getElementById('change').placeholder = 'Enter Number of Strip'
+            }else{
+                document.getElementById('med-level').innerHTML = 'Medicine Volume';
+                document.getElementById('change').placeholder = 'Enter Medicine Volumn'
+            }
+         
+
+           
+        }
+
+
+        const today = new Date();
+            const day = String(today.getDate()).padStart(2, "0");
+            const month = String(today.getMonth() + 1).padStart(2, "0"); 
+            const year = today.getFullYear();
+            const formattedDate = `${day}-${month}-${year}`;
+            document.getElementById("formattedDate").textContent = formattedDate;
+            $('#dob').attr('max',`${year}-${month}-${day}`);
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <script>
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+      }
+      $(document).ready(function(){
+        const userId = getCookie('user_id');
+        if (!userId){
+          alert("You are not login, redirecting to login page.")
+          window.location.href = "../index.html";
+        }
+        // Get auto-generated employee ID from backend
+        $.ajax({
+            method: 'POST',
+            url: '../python/backend.py',
+            data: {
+                cond: 'get_emp_id'
+            },
+            success: function (response) {
+                try {
+                    if (typeof response === 'string') {
+                        response = JSON.parse(response);
+                    }
+
+                    if (response.success) {
+                        $("input[name='emp_id']").val(response.emp_id); // Set in input field
+                    } else {
+                        alert("Failed to fetch Employee ID: " + response.message);
+                    }
+                } catch (e) {
+                    alert("Error parsing response: " + e);
+                }
+            },
+            error: function (xhr, status, error) {
+                alert("AJAX error: " + error);
+            }
+        });
+
+        // Submit employeeForm
+        $('#employeeForm').on('submit', function(e){
+            e.preventDefault();
+            const conf = confirm("Are you sure want to insert this record?");
+            if(!conf){
+                return;
+            }
+            $.ajax({
+                method: 'POST',
+                url: '../python/backend.py',
+                data: {
+                    cond: 'emp_entry',
+                    emp_id: $("input[name='emp_id']").val() || null,
+                    emp_name: $("input[name='emp_name']").val() || null,
+                    emp_number: $("input[name='emp_number']").val() || null,
+                    emp_email: $("input[name='emp_email']").val() || null,
+                    emp_dob: $("input[name='emp_dob']").val() || null,
+                    emp_gender: $("input[name='emp_gender']:checked").val() || null,
+                    emp_address: $("input[name='emp_address']").val() || null,
+                },
+                success: function (response) {
+                    try {
+                        // Parse if needed (depends on server response headers)
+                        if (typeof response === 'string') {
+                            response = JSON.parse(response);
+                        }
+
+                        if (response.success) {
+                            alert(response.message);
+                            window.location.reload();
+                        }
+                        else {
+                            alert(response.message);
+                        }
+                    }
+                    catch (e) {
+                        alert("Error parsing response: " + e);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert("AJAX Error: " + error);
+                }
+            });
+        });
+      });
+    </script>
+</html>

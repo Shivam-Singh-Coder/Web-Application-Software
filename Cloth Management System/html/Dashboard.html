@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/sidemenu.css" />
+    <title>Cloth | Dashboard</title>
+    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#user").click(function () {
+          $("#profile").toggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="div1">
+      <div class="leftdiv">
+        <div class="logodiv">
+          <img src="../img/logo.png" alt="" />
+          <a href="dashboard.html">ClothStore</a>
+        </div>
+        <div class="vertical-menu">
+          <i class="fa-solid fa-house fa-xl" style="position: relative; top: 25px; left: 30px; color: #ffffff;"></i><a href="Dashboard.html"  class="active">Dashboard</a>
+                    <i class="fa-solid fa-user fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="employee.html">Employee Details</a>
+                    <i class="fa-solid fa-users fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="customer.html">Customer Details</a>
+                    <i class="fa-solid fa-clipboard fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="order_details.html">Order Details</a>
+                    <i class="fa-solid fa-dumpster-fire fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="product.html">Product Details</a>
+                    <i class="fa-solid fa-box fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="stock.html">Stock Details</a>
+                    <i class="fa-solid fa-money-check fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="employee_payment.html">Employe Payments</a>
+                    <i class="fa-solid fa-credit-card fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="customer_payment.html">Customer Payments</a>
+                
+        </div>
+      </div>
+
+      <div class="rightdiv">
+        <div class="upper_div">
+          <p class="date_time">
+            Today's Date: <span id="formattedDate"></span>
+          </p>
+          
+          <div class="rdiv">
+            
+          </div>
+        </div>
+       
+
+        <div class="lower_div">
+         
+
+          <div class="div_box">
+            <div class="sbox">
+            <div class="icon"><i class="fa-solid fa-user fa-xl"></i></div>
+            <div class="text"><h1>Employee</h1></div>
+            </div>
+            <div class="sbox">
+              <div class="icon"><i class="fa-solid fa-users fa-xl"></i></div>
+              <div class="text"><h1>Customer</h1></div>
+              </div>
+              <div class="sbox">
+                <div class="icon"><i class="fa-solid fa-clipboard fa-xl"></i></div>
+                <div class="text"><h1>Order</h1></div>
+                </div>
+                <div class="sbox">
+                  <div class="icon"><i class="fa-solid fa-dumpster-fire fa-xl"></i></div>
+                  <div class="text"><h1>Product</h1></div>
+                  </div>
+                  <div class="sbox">
+                    <div class="icon"><i class="fa-solid fa-box fa-xl"></i></div>
+                    <div class="text"><h1>Stock</h1></div>
+                    </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const today = new Date();
+      const day = String(today.getDate()).padStart(2, "0");
+      const month = String(today.getMonth() + 1).padStart(2, "0"); 
+      const year = today.getFullYear();
+      const formattedDate = `${day}-${month}-${year}`;
+      document.getElementById("formattedDate").textContent = formattedDate;
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <script>
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+      }
+      $(document).ready(function(){
+        const userId = getCookie('user_id');
+        if (!userId){
+          alert("You are not login, redirecting to login page.")
+          window.location.href = "../index.html";
+        }
+      });
+    </script>
+  </body>
+</html>

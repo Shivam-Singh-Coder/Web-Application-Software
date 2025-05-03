@@ -1,0 +1,238 @@
+<html>
+    <head>
+        <title>Cloth | Customer Details</title>
+        <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/addmedicine.css">
+        <link rel="stylesheet" href="../css/sidemenu.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            $("#user").click(function(){
+            $("#profile").toggle();
+
+            });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="div1">
+            <div class="leftdiv">
+                <div class="logodiv">
+                    <img src="../img/logo.png" alt="">
+                    <a href="dashboard.html">ClothStore</a>
+                </div>
+                <div class="vertical-menu">
+                    <i class="fa-solid fa-house fa-xl" style="position: relative; top: 25px; left: 30px; color: #ffffff;"></i><a href="Dashboard.html" >Dashboard</a>
+                    <i class="fa-solid fa-user fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="employee.html">Employee Details</a>
+                    <i class="fa-solid fa-users fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="customer.html" class="active">Customer Details</a>
+                    <i class="fa-solid fa-clipboard fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="order_details.html">Order Details</a>
+                    <i class="fa-solid fa-dumpster-fire fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="product.html">Product Details</a>
+                    <i class="fa-solid fa-box fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="stock.html" >Stock Details</a>
+                    <i class="fa-solid fa-money-check fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="employee_payment.html" >Employe Payments</a>
+                    <i class="fa-solid fa-credit-card fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="customer_payment.html">Customer Payments</a>
+                  </div>
+            </div>
+
+            <div class="rightdiv">
+                <div class="upper_div">
+                    <p class="date_time">
+                        Today's Date: <span id="formattedDate"></span>
+                      </p>                
+                    
+                    
+                </div>
+                
+                <div class="lower_div" >
+                    <h2>Customer Details ></h2> <br>
+                    <a href="customer.html" class="service_btn"> <i class="fa-solid fa-arrow-left"></i> Service </a>  <br> <br>  <br>
+
+                    
+                    
+                    
+
+                        <div class="item_entry" id="item_entry">
+
+                            <h3>Entry Form</h3>
+                            <form action="" method="post" id="customerForm">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label for="">Customer Id</label> <br>
+                                            <input type="text" readonly name="cust_id" class="form-control"data-validation="" required  placeholder="Enter Customer Id" >
+                                            <div class="invalid-feedback" style="color: red;"></div>
+                                        </td>
+                                        <td>
+                                            <label for="">Customer Name</label> <br>
+                                            <input type="text" id="custName" name="cust_name" class="form-control"data-validation="onlyalphabets" required  placeholder="Enter Customer Name">
+                                            <div class="invalid-feedback" style="color: red;"></div>
+                                        </td>
+                                        <td>
+                                            <label for="">Mobile Number</label> <br>
+                                            <input type="text" id="number" maxlength="10" minlength="10" name="cust_number" class="form-control" data-validation="onlynumbers" required  placeholder="Enter Mobile Number " >
+                                            <div class="invalid-feedback" style="color: red;"></div>
+                                        </td>
+                                        
+        
+                                        
+    
+                                    </tr>
+    
+                                    <tr> 
+                                        <td>
+                                            <label for="">Email Id</label> <br>
+                                            <input type="email"  class="form-control email" name="cust_email" required  placeholder="Enter Email Id" >
+                                            <div class="invalid-feedback" style="color: red;"></div>
+                                        </td>
+        
+                                        
+                                        <td>
+                                            <label for="">Date Of Birth</label> <br>
+                                            <input id="" type="date" required name="cust_dob">
+                                            <div class="invalid-feedback" style="color: red;"></div>
+                                        </td>
+    
+                                        <td>
+                                            <label for="">Gender</label><br>
+                                            <input id="" type="radio" name= 'cust_gender' value="male" checked> Male
+                                            <input id="" type="radio" name= 'cust_gender' value="female"> Female
+                                            <input id="" type="radio" name= 'cust_gender' value="other"> Other
+                                            <div class="invalid-feedback" style="color: red;"></div>
+                                        </td>
+    
+                                    </tr>
+                            
+                                    <tr>
+                                        <td colspan="2">
+                                            <label for="" >Address</label> <br>
+                                            <input type="text" placeholder="Enter Address " name="cust_address"  class="form-control" required  style="width: 710px;">
+                                            <div class="invalid-feedback" style="color: red;"></div>
+    
+                                        </td>
+                                        <td>
+                                            <div class="div-btn">
+                                                <button type="submit"  id="submit" style=" background-color: green; "> Submit  </button>
+                                                <button type="reset"  id="reset" style="background-color: red; ">Reset</button>
+                                               
+                                       
+                                            </div>   
+                                        </td>
+                                    </tr>
+                            
+                             
+                                   
+                                </table>
+                            </form>
+                             
+                         
+                            <h2 id="save_msg" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; color: green; text-align: center; padding: 25px; "></h2>
+                        </div>
+                     
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="../js/index.js"></script>
+
+<script>
+    const today = new Date();
+            const day = String(today.getDate()).padStart(2, "0");
+            const month = String(today.getMonth() + 1).padStart(2, "0"); 
+            const year = today.getFullYear();
+            const formattedDate = `${day}-${month}-${year}`;
+            document.getElementById("formattedDate").textContent = formattedDate;
+            $('input[name="cust_dob"]').attr('max',`${year}-${month}-${day}`);
+</script>
+     <script>
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+        $(document).ready(function () {
+            const userId = getCookie('user_id');
+            if (!userId){
+            alert("You are not login, redirecting to login page.")
+            window.location.href = "../index.html";
+            }
+            // Get auto-generated customer ID from backend
+            $.ajax({
+                method: 'POST',
+                url: '../python/backend.py',
+                data: {
+                    cond: 'get_cust_id'
+                },
+                success: function (response) {
+                    try {
+                        if (typeof response === 'string') {
+                            response = JSON.parse(response);
+                        }
+
+                        if (response.success) {
+                            $("input[name='cust_id']").val(response.cust_id); // Set in input field
+                        } else {
+                            alert("Failed to fetch Customer ID: " + response.message);
+                        }
+                    } catch (e) {
+                        alert("Error parsing response: " + e);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert("AJAX error: " + error);
+                }
+            });
+
+            // Submit customerForm
+            $('#customerForm').on('submit', function(e){
+                e.preventDefault();
+                const conf = confirm("Are you sure want to insert this record?");
+                if(!conf){
+                    return;
+                }
+                $.ajax({
+                    method: 'POST',
+                    url: '../python/backend.py',
+                    data: {
+                        cond: 'cust_entry',
+                        cust_id: $("input[name='cust_id']").val() || null,
+                        cust_name: $("input[name='cust_name']").val() || null,
+                        cust_number: $("input[name='cust_number']").val() || null,
+                        cust_email: $("input[name='cust_email']").val() || null,
+                        cust_dob: $("input[name='cust_dob']").val() || null,
+                        cust_gender: $("input[name='cust_gender']:checked").val() || null,
+                        cust_address: $("input[name='cust_address']").val() || null,
+                    },
+                    success: function (response) {
+                        try {
+                            // Parse if needed (depends on server response headers)
+                            if (typeof response === 'string') {
+                                response = JSON.parse(response);
+                            }
+
+                            if (response.success) {
+                                alert(response.message);
+                                window.location.reload();
+                            }
+                            else {
+                                alert(response.message);
+                            }
+                        }
+                        catch (e) {
+                            alert("Error parsing response: " + e);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        alert("AJAX Error: " + error);
+                    }
+                });
+            });
+        });
+
+     </script>   
+
+
+    </body>
+</html>

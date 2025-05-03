@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.add_btn{
+    background-color: #009099;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.add_btn:hover{
+    background-color: #047880;
+}
+.item_entry
+{
+    width: auto;
+    height: 220px;
+    background-color: #f1efef;
+    border: 1px solid gray;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.047);
+    padding: 15px;
+
+
+}
+
+.item_entry h3{
+    background-color: #009099;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+.item_entry table td{
+    border: none;
+    padding-left:20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 80px;
+    padding: 0px 80px;
+
+}
+
+.item_entry table td input{
+    width: 400px;
+    background-color:#EDF1F5;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+}
+
+.div-btn button{
+    cursor: pointer;
+    padding: 10px;
+    width: 100px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+    top: 7px;
+    margin-left: 10px;
+}
+.div-btn button:hover{
+    text-decoration: underline;
+}
+
+.item_entry table{
+    margin-top: 20px;
+}
+.div-btn
+{
+    display: flex;
+    justify-content: center;
+}
+.data_table{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.047);
+    padding: 20px;
+    border: 1px solid gray;
+    margin-top: 20px;
+    display: none;
+    max-height: 600px;
+    overflow-y: auto;
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+  
+th {
+    border: 1px solid grey;
+
+    text-align: left;
+    padding: 8px;
+    background-color: #009099;
+    color: white;
+}
+td {
+    border: 1px solid grey;
+    text-align: left;
+    padding: 8px;
+}

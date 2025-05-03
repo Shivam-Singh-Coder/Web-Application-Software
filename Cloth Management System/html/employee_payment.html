@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <title>Cloth | Employee Payment Details</title>
+        <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/customer.css">
+        <link rel="stylesheet" href="../css/sidemenu.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            $("#user").click(function(){
+            $("#profile").toggle();
+
+            });
+            });
+            $(document).ready(function(){
+            $("#search-btn").click(function(){
+            $("#data_table").fadeIn();
+
+            });
+            });
+            $(document).ready(function(){
+            $("#refresh-btn").click(function(){
+            $("#data_table").fadeOut();
+
+            });
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="div1">
+            <div class="leftdiv">
+                <div class="logodiv">
+                    <img src="../img/logo.png" alt="">
+                    <a href="dashboard.html">ClothStore</a>
+                </div>
+                <div class="vertical-menu">
+                    <i class="fa-solid fa-house fa-xl" style="position: relative; top: 25px; left: 30px; color: #ffffff;"></i><a href="Dashboard.html" >Dashboard</a>
+                    <i class="fa-solid fa-user fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="employee.html">Employee Details</a>
+                    <i class="fa-solid fa-users fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="customer.html">Customer Details</a>
+                    <i class="fa-solid fa-clipboard fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="order_details.html">Order Details</a>
+                    <i class="fa-solid fa-dumpster-fire fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="product.html">Product Details</a>
+                    <i class="fa-solid fa-box fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="stock.html" >Stock Details</a>
+                    <i class="fa-solid fa-money-check fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="employee_payment.html" class="active">Employe Payments</a>
+                    <i class="fa-solid fa-credit-card fa-xl" style="position: relative; top: 30px; left: 30px; color: #ffffff;"></i><a href="customer_payment.html">Customer Payments</a>
+                  </div>
+            </div>
+
+            <div class="rightdiv">
+                <div class="upper_div">
+                    <p class="date_time">
+                        Today's Date: <span id="formattedDate"></span>
+                      </p>                    
+                   
+                   
+                </div>
+               
+                <div class="lower_div" >
+                    <h2> Employee Payment> </h2> <br>
+                    <a href="employee_paymentform.html" class="add_btn"> <i class="fa-solid fa-plus"></i> Add New </a>  <br> <br>  <br>
+
+                    
+                    
+
+                        <div class="item_entry" id="item_entry">
+                            <h3> Service </h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="">Employee Id</label> <br>
+                                        <input  type="text" list="EmployeeId" placeholder="Search by Customer Name">
+                                        <datalist  id="EmployeeId">
+                                            <option value="E001">
+                                            <option value="E002">
+                                            <option value="E003">
+                                            
+                                    
+                                          </datalist>
+                                    </td>
+                                    <td>
+                                        <label for="">Payment Date</label> <br>
+                                        <input type="text"  list="payD" placeholder=" Search by Mobile Number " >
+                                        <datalist  id="payD">
+                                            <option value="12-09-2023">
+                                            <option value="13-08-2024">
+                                            <option value="09-04-2022">
+                                          </datalist>
+                                    </td>
+
+                                    <td><div class="div-btn">
+                                        <button id="search-btn"  style=" background-color: green; "> Search  </button>
+                                        <button id="refresh-btn"  style="background-color: red;">Reset</button>
+                                        
+                                    
+                                    </div></td>
+                                    
+                                </tr>
+                                
+                            </table>
+                            
+                          
+                            <h2 id="save_msg" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; color: green; text-align: center; padding: 25px; "></h2>
+                        </div>
+            
+                    
+                    <div class="data_table" id="data_table">
+                        <table>
+                          
+                            <tr>
+                                <th>S.N</th>
+                                <th>Employee Name</th>
+                                <th>Payment Date</th>
+                                <th>Pay Amount</th>
+                                <th style="width: 100px;">Action</th>
+                            </tr>
+                        
+                            <tr>
+                               <td>1</td>
+                               <td>ajeet kumar</td>
+                               <td>03-02-2024</td>
+                               <td>1200</td>
+                               
+                                <td>
+                                    <a href="employeepayUpdate.html">
+                                        <button style="border: none; padding: 7px 14px; margin-left: 5px; color: white; border-radius: 5px; background-color: green;"><i class="fa-solid fa-pen-to-square"></i></button>
+                                    </a>
+                                    
+                                    <button style="border: none; padding: 7px 14px; color: white; border-radius: 5px; background-color: red;"><i class="fa-solid fa-trash"></i></button>
+                                </td>   
+                            </tr>
+                                                    
+                           
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        const today = new Date();
+            const day = String(today.getDate()).padStart(2, "0");
+            const month = String(today.getMonth() + 1).padStart(2, "0"); 
+            const year = today.getFullYear();
+            const formattedDate = `${day}-${month}-${year}`;
+            document.getElementById("formattedDate").textContent = formattedDate;
+
+    </script>
+</html>
